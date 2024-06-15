@@ -4,6 +4,7 @@ Vercel and Express are Sad Together. Where body?
 
 
 ## Good
+This was run with `vercel dev`
 ```
 curl -H 'Content-Type: application/json' \
       -d '{ "title":"foo","body":"bar", "id": 1}' \
