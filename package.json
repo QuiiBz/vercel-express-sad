@@ -1,0 +1,9 @@
+{
+  "name": "vercel-express-sad",
+  "repository": "https://github.com/vercel/examples.git",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
