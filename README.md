@@ -5,19 +5,20 @@ Vercel and Express are Sad Together. Where body?
 
 ## Good
 ```
-curl --location 'http://localhost:3000/greet' \                        
---header 'Content-Type: application/json' \
---data '{
-    "name": "maggie"
-}'
+curl -H 'Content-Type: application/json' \
+      -d '{ "title":"foo","body":"bar", "id": 1}' \
+      -X POST \
+      http://localhost:3000/greet
+/// outputs
+{"title":"foo","body":"bar","id":1}%  
 ```
 
 ## Bad
 
 ```
-curl --location 'https://vercel-express-sad.vercel.app/greet' \
---header 'Content-Type: application/json' \
---data '{
-    "name": "maggie"
-}'
+curl -H 'Content-Type: application/json' \
+      -d '{ "title":"foo","body":"bar", "id": 1}' \
+      -X POST \
+      https://vercel-express-sad.vercel.app/greet
+/// outputs nothing
 ```
